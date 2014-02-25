@@ -1,0 +1,31 @@
+var FORMS=FORMS || {};
+FORMS.RECIPE=function(ele){
+    /*constructor
+    **/
+   this.element=ele;
+   var form1={};
+   /*METHODS */
+   this.ADD=add;
+   this.isVALIDATED=isValidated;
+   this.JSON=Json;
+   
+   function add(){
+         var typeInput=$(this.element).find(":input");
+         $.each(typeInput,function(k,v){
+             switch($(v).attr("id")){
+                  case "txtname": this.form1["NAME"]=$(v).val();break;
+                  case "txtdesc": this.form1["DESC"]=$(v).val();break;
+                  default:break;
+                 }
+           });
+     } /*ADD NEW RECIPE METHOD*/
+   function isValidated(){return true;}/* VALIDATION METHOD */
+   function Json(){return "NULL";}/*GET JSON OBJECT METHOD*/
+}
+
+
+/*
+I am not able to access form1 array to stor name and description values
+How to do ?
+
+*/
