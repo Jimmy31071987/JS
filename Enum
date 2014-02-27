@@ -1,0 +1,9 @@
+AJAX.ENUMOPERATIONS={
+     INSERT:0,
+     SELECT:1,
+     UPDATE:2,
+     DELETE:3
+};
+
+
+//Create Enumerated types in Javascript
