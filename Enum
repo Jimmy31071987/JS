@@ -5,6 +5,7 @@ Time: 12:46 PM
 Email: jimmy31071987@gmail.com
 
 */
+var AJAX=AJAX || {}; // NAMESPACE AJAX
 
 AJAX.ENUMOPERATIONS={
      INSERT:0,
