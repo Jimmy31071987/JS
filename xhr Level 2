@@ -1,0 +1,10 @@
+//To send Form data
+//Parul
+
+xhr.open('POST','/server_sidescript');
+
+formOBJ.append('name','Parul'); // add data to the object
+formOBJ.append('age','26');
+formOBJ.append('hobby','programming');
+
+xhr.send(formOBJ); // send the object
