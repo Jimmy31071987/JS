@@ -8,3 +8,27 @@ formOBJ.append('age','26');
 formOBJ.append('hobby','programming');
 
 xhr.send(formOBJ); // send the object
+
+//------------------------------------------------------------------------------------
+
+
+//For Retrieving Binary Data
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/path/to/image.png', true);
+xhr.responseType = 'blob';
+
+xhr.onload = function(e) {
+  if (this.status == 200) {
+    // Note: .response instead of .responseText
+    var blob = new Blob([this.response], {type: 'image/png'});
+    ...
+  }
+};
+
+xhr.send();
+
+
+
+//For sending Binary Data
+
